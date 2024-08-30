@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Classify Age</title>
+    </head>
+    <body>
+        
+        <h1 id="age"></h1>
+        
+    </body>
+
+
+
+    <script>
+
+        var age = parseInt(prompt("Enter Your Age:- "));
+
+        if(age < 0){
+
+            document.getElementById("age").innerHTML = "Enter Correct Age."
+        }else if( age >= 0 && age <= 14){
+
+            document.getElementById("age").innerHTML = "You Are Children."
+        }else if( age <= 24){
+
+            document.getElementById("age").innerHTML = "You Are In Early Working Age."
+        }else if( age <= 54){
+
+            document.getElementById("age").innerHTML = "You Are Prime Working Age."
+        }else if( age <= 64){
+
+            document.getElementById("age").innerHTML = "You Are Mature Working Age."
+        }else{
+
+            document.getElementById("age").innerHTML = "You Are Elder."
+        }
+
+    </script>
+</html>

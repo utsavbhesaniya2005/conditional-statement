@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bill Generate</title>
+    </head>
+    <body>
+        
+        <h1 id="bill"></h1>
+
+
+    </body>
+
+
+
+    <script>
+
+        var generate = document.getElementById("bill");
+
+        var watt = parseInt(prompt("Enter Watt of Bill: "));
+        var bill;
+
+        if(watt <= 50){
+
+            bill = watt * 1;
+        }else if(watt <= 100){
+
+            bill = 50 + (watt - 50) * 2; 
+        }else if(watt <= 150){
+
+            bill = 150 + (watt - 100) * 3;
+        }else{
+
+            bill = 300 + (watt - 150) * 4;
+        }
+
+        var add_charge = bill * 0.2;
+
+        var total = bill + add_charge;
+
+        generate.innerHTML =  "total bill is :-" + total;
+        console.log(total);
+        
+        
+
+
+    </script>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interest Rate</title>
+</head>
+
+<body>
+
+    <h1 id="interest"></h1>
+
+</body>
+
+
+<script>
+
+    var cal;
+    var amount = parseInt(prompt("Enter Principal Amount: "));
+    var year = parseInt(prompt("Enter Number Of Year: "));
+
+    var r_interest;
+
+    if (year <= 2) {
+
+        alert("Enter Greater Than 2 Years");
+    } else {
+
+        if (year >= 3 && year <= 5) {
+
+            cal = (amount * 3 * year) / 100;
+            document.getElementById("interest").innerHTML = "Rate Of Interest Is :- " + cal;
+        } else {
+
+            if (year >= 6 && year <= 8) {
+
+                cal = (amount * 5 * year) / 100;
+                document.getElementById("interest").innerHTML = "Rate Of Interest Is :- " + cal;
+            }else{
+
+                if (year >= 9 && year <= 12) {
+
+                    cal = (amount * 12 * year) / 100;
+                    document.getElementById("interest").innerHTML = "Rate Of Interest Is :- " + cal;
+                }else{
+
+                    cal = (amount * 15 * year) / 100;
+                    document.getElementById("interest").innerHTML = "Rate Of Interest Is :- " + cal;
+                }
+            }
+        }
+    }
+
+</script>
+
+</html>
